@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bốc thăm may mắn</title>
+
+<style>
+body{
+    font-family:sans-serif;
+    text-align:center;
+    background:white;
+    margin-top:60px;
+}
+
+#spinner{
+    font-size:70px;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+#result{
+    font-size:60px;
+    color:red;
+    margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🎉 BỐC THĂM MAY MẮN 🎉</h1>
+
+<div id="spinner">🎲</div>
+<div id="result"></div>
+
+<script>
+setTimeout(function(){
+
+    document.getElementById("spinner").style.display="none";
+
+    let number = (Math.floor(Math.random()*191)+10)*100;
+
+    document.getElementById("result").innerHTML =
+        "Kết quả của bạn:<br>"+number;
+
+},2000);
+</script>
+
+</body>
+</html>
