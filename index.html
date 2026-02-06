@@ -43,7 +43,8 @@ setTimeout(function(){
 
     document.getElementById("spinner").style.display="none";
 
-    let number = (Math.floor(Math.random()*191)+10)*100;
+    // Random từ 1000 → 50000, chia hết cho 100
+    let number = (Math.floor(Math.random()*491)+10)*100;
 
     document.getElementById("result").innerHTML =
         "Kết quả của bạn:<br>"+number;
